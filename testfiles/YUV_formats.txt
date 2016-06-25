@@ -1,0 +1,39 @@
+
+YUV Formats
+
+1. YUV420 
+
+(1) YU12, I420
+
+YYYY YYYY UU VV
+
+(2) YV12 
+
+YYYY YYYY VV UU
+
+(3) NV12
+
+YYYY YYYY UV UV
+
+(4) NV21
+
+YYYY YYYY VU VU
+
+--------------------
+
+2. YUV422
+
+(1) YUYV, YUY2
+
+YUYV YUYV YUYV YUYV
+
+(2) UYVY
+
+UYVY UYVY UYVY UYVY
+
+(3) YUV422P
+
+YYYY YYYY UUUU VVVV
+
+
+
