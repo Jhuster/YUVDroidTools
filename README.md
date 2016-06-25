@@ -9,7 +9,7 @@ Features
 
 ScreenShot
 =========
-<img src=“/screenshots/home.png width=“450” height=“800” />
+<img src="/screenshots/home.png" width=“450” height="800" />
 
 Download
 =========
