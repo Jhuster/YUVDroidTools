@@ -9,11 +9,12 @@ Features
 
 ScreenShot
 =========
-<img src=“/screenshots/1.png” />
+<img src=“/screenshots/home.png width=“450” height=“800” />
 
 Download
 =========
 - **BarCode**
+
 <img src="/screenshots/download.png" width=“280” height="280" />
 
 
