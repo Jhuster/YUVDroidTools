@@ -31,7 +31,7 @@ public class FFConverter {
     public static final int CV_FMT_ABGR8888 = 12;
     public static final int CV_FMT_BGRA8888 = 13; // equals to Android Config.ARGB_8888
 
-    // All the supported converte algorithm
+    // All the supported algorithm
     public static final int CV_ALG_FAST_BILINEAR   = 0;
     public static final int CV_ALG_BILINEAR        = 1;
     public static final int CV_ALG_BICUBIC         = 2;

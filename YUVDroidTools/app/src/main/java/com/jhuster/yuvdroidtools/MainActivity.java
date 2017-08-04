@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
@@ -70,9 +71,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClickBrowse(View v) {
-        Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
-        intent.setType("*/*");
-        intent.addCategory(Intent.CATEGORY_OPENABLE);
+        Intent intent = new Intent();
+        if (Build.VERSION.SDK_INT < 19) {
+            intent.setAction(Intent.ACTION_GET_CONTENT);
+            intent.setType("*/*");
+        } else {
+            intent.setAction(Intent.ACTION_OPEN_DOCUMENT);
+            intent.addCategory(Intent.CATEGORY_OPENABLE);
+            intent.setType("*/*");
+        }
         startActivityForResult(Intent.createChooser(intent, "Please choose a YUV file"), 0);
     }
 
@@ -101,6 +108,9 @@ public class MainActivity extends AppCompatActivity {
             if (mSelectedFilepath != null && !"".equals(mSelectedFilepath)) {
                 mFilePathTextView.setText(mSelectedFilepath);
             }
+            Intent intent = new Intent("View.Bokeh");
+            intent.setData(data.getData());
+            startActivity(intent);
         }
     }
 
