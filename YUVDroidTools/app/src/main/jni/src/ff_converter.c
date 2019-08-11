@@ -99,7 +99,7 @@ void ff_converter_close(FF_CONVERTER fd)
 }
 
 int ff_converter_calc_size(int width, int height, int fmt) {
-    return avpicture_get_size(SUPPORTED_FMT_ARRAY[fmt], width, height);
+    return avpicture_get_size(fmt, width, height);
 }
 
 int ff_converter_calc_src_size(FF_CONVERTER fd)
@@ -119,7 +119,7 @@ int ff_converter_process(FF_CONVERTER fd, unsigned char *src, int src_size, unsi
     ff_converter_t * converter = (ff_converter_t *) fd;
 
     int src_bytes = ff_converter_calc_src_size(fd);
-    int dst_bytes = ff_converter_calc_src_size(fd);
+    int dst_bytes = ff_converter_calc_dst_size(fd);
     if (src_size < src_bytes || dst_size < dst_bytes) {
         return -1;
     }
